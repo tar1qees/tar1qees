@@ -1,18 +1,28 @@
-// Show login popup on load
+// Show login popup on page load
 window.onload = function () {
-  document.getElementById("loginPopup").style.display = "flex";
+  const popup = document.getElementById("loginPopup");
+  if (popup) {
+    popup.style.display = "flex";
+  }
 };
 
-// Close popup when user agrees
-document.getElementById("agreeBtn").addEventListener("click", function () {
-  document.getElementById("loginPopup").style.display = "none";
-});
+// Close the popup when "I Agree" is clicked
+document.addEventListener("DOMContentLoaded", function () {
+  const agreeBtn = document.getElementById("agreeBtn");
+  const popup = document.getElementById("loginPopup");
 
-// Show alert when Buy Now is clicked
-document.querySelectorAll("button").forEach(button => {
-  if (button.textContent === "Buy Now") {
-    button.addEventListener("click", () => {
-      alert("Thanks for shopping with Tariqees!");
+  if (agreeBtn && popup) {
+    agreeBtn.addEventListener("click", function () {
+      popup.style.display = "none";
     });
   }
+
+  // Optional: Add alert on buy buttons
+  document.querySelectorAll("button").forEach(button => {
+    if (button.textContent === "Buy Now") {
+      button.addEventListener("click", () => {
+        alert("Thanks for shopping with Tariqees!");
+      });
+    }
+  });
 });
