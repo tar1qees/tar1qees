@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tariqees - Online Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="popup" id="loginPopup">
+        <div class="popup-content">
+            <h3>Login Required</h3>
+            <p>You must log in and agree to our terms and conditions to continue.</p>
+            <button id="agreeBtn">I Agree</button>
+        </div>
+    </div>
+
+    <header>
+        <h1>Welcome to Tariqees</h1>
+        <p>Your one-stop shop for stylish shoes</p>
+        <input type="text" placeholder="Search shoes..." />
+    </header>
+
+    <section id="shoes">
+        <h2>Featured Shoes</h2>
+        <div class="shoe">
+            <img src="shoe1.jpg" alt="Shoe 1" />
+            <p class="name">Cool Sneakers</p>
+            <p class="price">$49.99</p>
+            <label for="size1">Size:</label>
+            <select id="size1">
+                <option>38</option>
+                <option>39</option>
+                <option>40</option>
+                <option>41</option>
+            </select>
+            <label for="quantity1">Quantity:</label>
+            <input type="number" id="quantity1" min="1" value="1"/>
+            <button>Buy Now</button>
+        </div>
+        <div class="shoe">
+            <img src="shoe2.jpg" alt="Shoe 2" />
+            <p class="name">Classic Boots</p>
+            <p class="price">$69.99</p>
+            <label for="size2">Size:</label>
+            <select id="size2">
+                <option>38</option>
+                <option>39</option>
+                <option>40</option>
+                <option>41</option>
+            </select>
+            <label for="quantity2">Quantity:</label>
+            <input type="number" id="quantity2" min="1" value="1"/>
+            <button>Buy Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tariqees. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
